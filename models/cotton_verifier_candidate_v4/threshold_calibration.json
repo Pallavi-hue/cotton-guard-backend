@@ -1,0 +1,16 @@
+{
+  "architecture": "mobilenet_v3_small_mcd",
+  "num_classes": 3,
+  "class_mapping": {
+    "0": "cotton",
+    "1": "herbaceous_crop",
+    "2": "tree_foliage"
+  },
+  "validation_calibrated_thresholds": {
+    "tau_cotton": 0.75,
+    "tau_tree_veto": 0.2,
+    "tau_reject": 0.25,
+    "note": "Preserved exact production threshold operating point"
+  },
+  "decision_logic": "ACCEPTED_COTTON if p_cotton >= tau_cotton and p_tree < tau_tree_veto; REJECTED_NON_COTTON if p_cotton <= tau_reject or p_tree >= 0.50; REJECTED_UNCERTAIN otherwise"
+}

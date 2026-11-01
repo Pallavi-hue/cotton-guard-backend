@@ -1,0 +1,32 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Datasets and training logs
+datasets/
+dataset/
+logs/
+*.log
+
+# Experimental checkpoints & non-production files
+*.bak*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment files and credentials
+.env
+.env.*
+*.pem
+serviceAccountKey.json
+google-services.json
